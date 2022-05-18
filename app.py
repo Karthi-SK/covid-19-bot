@@ -189,7 +189,7 @@ def make_reply(msg):     # user input will go here
         reply = bot_initialize(msg)     # user input will start processing to bot_initialize function
     return reply
        
-while False:
+while True:
     print("...")
     updates = tbot.get_updates(offset=update_id)
     # print(test_responses)
