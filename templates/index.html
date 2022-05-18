@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid-19 Bot</title>
+    <style>
+        .todo {
+            padding: 20px;
+            margin: 10px;
+            background-color: #eee;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Covid-19 BOT</h1>
+    <hr>
+    <div class="content">
+        <form method="post">
+            <p>
+                <b><label for="content">Query</label></b>
+            </p>
+            <p>
+                <input type="text" name="content"
+                    placeholder="Your query"></input>
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+
+        <hr>
+
+        <div class="todo">
+            <h2>Query : {{ result['query'] }}</h2>
+            <br>
+            <p>{{ result['result'] }}</p>
+        </div>
+    </div>
+</body>
+</html>

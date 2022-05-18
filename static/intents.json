@@ -1,0 +1,98 @@
+{"intents": [
+        {"tag": "greeting", 
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?", " I'm your personal assistant. Hope you're staying safe. I'm here and You may inquire about Covid-19 at any time."],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."," Had a good time having conversation with you. "],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand", "Unable to Understand Please Provide Correct Context"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered","Details","Help"],
+         "responses": ["I'll Guide You Through All Statistics, Guideline and queries related to Covid-19"],
+         "context": [""]
+        },
+        {"tag": "Covid-19",
+         "patterns": ["Covid-19"," CoronaVirus", "Corona virus"," Covid "," SARS-CoV-2", " What is Covid-19 ", "What is Coronavirus?"],
+         "responses": ["Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.\nMost people infected with the virus will experience mild to moderate respiratory illness and recover without requiring special treatment.",
+         "Coronaviruses are a type of virus. There are many different kinds, and some cause disease. \nA coronavirus identified in 2019, SARS-CoV-2, has caused a pandemic of respiratory illness, called COVID-19.",
+         "The first case of COVID-19 was reported Dec. 1, 2019, and the cause was a then-new coronavirus later named SARS-CoV-2. SARS-CoV-2 may have originated in an animal and changed (mutated) so it could cause illness in humans." ],
+         "context": [""]
+        },
+        {"tag": "Symptoms",
+         "patterns": ["What is Covid Symptoms?", "Symptoms", "What are the Symptoms for CoronaVirus?", "Covid-19 Symptoms", "CoronaVirus Symptoms", "Symptoms for covid-19"],
+         "responses": ["Cough\nFever or chills\nShortness of breath or difficulty breathing\nMuscle or body aches\nSore throat\nNew loss of taste or smell\nDiarrhea\nHeadache\nNew fatigue\nNausea or vomiting\nCongestion or runny nose"],
+         "context": [""]
+        },
+        {"tag": "Precautions",
+         "patterns": ["Precautions", "what are the precautious for covid-19", "what are the remedy for covid 19?", "Remedy", "Solution for prevention of covid 19", "prevention"],
+         "responses": ["Wear a mask\nClean your hands\nMaintain safe distance\nGet vaccinated\nMaintain a safe distance from others (at least 1 metre), even if they don’t appear to be sick,\nWear a mask in public, especially indoors or when physical distancing is not possible.\nChoose open, well-ventilated spaces over closed ones\nOpen a window if indoors.\nClean your hands often. Use soap and water, or an alcohol-based hand rub.\nGet vaccinated when it’s your turn. Follow local guidance about vaccination.\nCover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.\nStay home if you feel unwell."],
+         "context": [""]
+        },
+        {"tag": "Mask",
+         "patterns": ["Should we wear mask","What is mask used for","Mask","How to wear a mask properly"],
+         "responses": ["Wearing well-fitted masks should be used as part of a comprehensive ‘Do it all!’ approach including maintaining physical distancing, avoiding crowded, closed and close-contact settings, ensuring good ventilation of indoor spaces, cleaning hands regularly, and covering sneezes and coughs with a tissue of bent elbow.Depending on the type, masks can be used for either protection of healthy persons or to prevent onward transmission, or both."],
+         "context": [""]
+        },
+        {"tag": "Types of mask",
+                "patterns": ["What are the types of mask?", "types of mask", "What masks should people wear"],
+                "responses": ["Reusable non-medical masks,\nDisposable,\nOther types of well-fitting non-medical masks,\nDisposable medical masks are also recommended for the following groups, because if infected, they are at a higher risk of becoming seriously ill with COVID-19 and dying:\n  People aged 60 or over.\n  People of any age with underlying health conditions, including chronic respiratory disease, cardiovascular disease, cancer, obesity, immunocompromised patients and diabetes mellitus. "],
+                "context": [""]
+               },
+        {"tag": "Doctors",
+         "patterns": ["Is meeting a doctor is compulsory", "Can we consult a doctor of covid 19", "What should we do if we have difficulty in breathing ?","When to consult a doctor"],
+         "responses": ["If you have a fever, cough and difficulty breathing, seek medical attention. Call in advance so your healthcare provider can direct you to the right health facility. This protects you, and prevents the spread of viruses and other infections."],
+         "context": [""]
+        },
+        {"tag": "Help Desk",
+         "patterns": ["Helpline numbers", "Emergency", "Emergence contacts"],
+         "responses": ["Here are the helpine contacts for state-wise - https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf "],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Lookup for hospital", "District Wise Hospitals","Searching for hospital to transfer patient","Vacant hostpial ", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+         "responses": ["Here are the StateWise Covid hospital links - https://www.mohfw.gov.in/pdf/StatewiseCovidHospitalslink19062020.pdf ",
+        " Here are the District-wise Covid hospital links - https://www.vmaconslm.edu.in/adminpanel/news/b79ec1a6a142f2a4ae75ef970b2c47d3Tamil%20Nadu%20CORONA%20virus%20(Districtwise)Helpline%20Numbers.pdf"],
+         "context": [""]
+        },
+        {"tag": "vaccination",
+         "patterns": ["Is vaccination mandatory","Vaccination","Use of vaccinating"," How can i get vaccinated"],
+         "responses": ["Covid-19 vaccines have been tested by multiple drug administration authorities in the world. They are proven to be effective in reducing your probability of contracting COVID-19. Once you are vaccinated, your body is much better prepared to shield off more viruses by making your immune system stronger."],
+         "context": ["vaccination_registeration"]
+        },
+        {"tag": "vaccination_registeration",
+                "patterns": ["Vaccine registeration","Vaccination link"," How can i get vaccinated"],
+                "responses": ["Make us of this link - https://www.cowin.gov.in/  to register your vaccination by providing all the necessary details"],
+                "context": [""]
+        },
+        {"tag": "Statistics",
+         "patterns": ["statistics","Show me the Statistics","Vaccination statistics", "stats","vaccinated stats"],
+         "responses": ["https://www.worldometers.info/coronavirus/ you can make use of this link to check the stats.",
+                        "https://ourworldindata.org/covid-vaccinations?country=IND - vaccination stats. "],
+         "context": ["Report"]
+        },
+        {"tag": "Report",
+                "patterns": ["Report"],
+                "responses": ["You can access the Report provided by WHO - https://covid19.who.int/table"],
+                "context": [""]
+               },
+        {
+                "tag": "Guidelines",
+                "patterns": ["Gudielines for covid patients","Guidelines","What can i do if i'm infected with covid virus"],
+                "responses": ["https://www.mohfw.gov.in/pdf/RevisedHomeIsolationGuidelines05012022.pdf- Check on this "],
+                "context": [""]    
+        }
+   ]
+}
