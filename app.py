@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect
-# from pymongo import MongoClient
+from pymongo import MongoClient
 # from bson.objectid import ObjectId
 # from flask_ngrok import run_with_ngrok
 # import tensorflow
@@ -17,7 +17,9 @@ nltk.download('wordnet')
 lemmatizer = WordNetLemmatizer()
 stemmer = LancasterStemmer()
 
-# client = MongoClient('localhost', 27017)
+client = MongoClient('mongodb://mongo:2URBet0GPFGwQNSGUkzO@containers-us-west-41.railway.app:7882')
+db = client['covid-bot']
+df = db.dialogflow
 
 # db = client.flask_db # db name
 # todos = db.kudos # collection name
@@ -208,6 +210,7 @@ while True:
             from_ = item["message"]["from"]["id"]
             print(from_)
             reply = make_reply(message)
+            df.insert_one({'query': message, 'response': reply})
             tbot.send_message(reply,from_)
 
 if __name__ == '__main__':
