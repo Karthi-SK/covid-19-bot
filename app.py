@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, url_for, redirect
-from pymongo import MongoClient
-from bson.objectid import ObjectId
-from flask_ngrok import run_with_ngrok
-import random, tensorflow
+# from pymongo import MongoClient
+# from bson.objectid import ObjectId
+# from flask_ngrok import run_with_ngrok
+# import tensorflow
+import random
 import nltk
 import json, requests, ast
 import numpy, pickle, tflearn
