@@ -195,7 +195,7 @@ def make_reply(msg):     # user input will go here
 while True:
     print("...")
     updates = tbot.get_updates(offset=update_id)
-    # print(test_responses)
+    print(updates)
     updates = updates['result']
     print(updates)
     if updates:
@@ -203,15 +203,28 @@ while True:
             update_id = item["update_id"]
             print(update_id)
             try:
-                message = item["message"]["text"]
+                try:
+                    message = item["message"]["text"]
+                except:
+                    message = item["text"]
                 print(message)
             except:
                 message = None
-            from_ = item["message"]["from"]["id"]
+
+            try:
+                try:
+                    from_ = item["my_chat_member"]["chat"]["id"]
+                except:
+                    from_ = item["message"]["from"]["id"]                    
+            except:
+                from_ = None
+
             print(from_)
-            reply = make_reply(message)
-            df.insert_one({'query': message, 'response': reply})
-            tbot.send_message(reply,from_)
+            if message is not None:
+                reply = make_reply(message)
+            if from_ is not None and message is not None:
+                df.insert_one({'query': message, 'response': reply})
+                tbot.send_message(reply,from_)
 
 if __name__ == '__main__':
 	app.run()
