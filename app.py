@@ -169,7 +169,7 @@ def bot_initialize(user_msg):
 
 class telegram_bot():
     def __init__(self):
-        self.token = "5398815839:AAEAVm4mpvAOYXoKfNO-WQHmtBQg9-xINS0"    #write your token here!
+        self.token = "5424515607:AAE7ZK3QdTuSdD1o30UDQIv4PZipkUHm9tU"    #write your token here!
         self.url = f"https://api.telegram.org/bot{self.token}"
     def get_updates(self,offset=None):
         url = self.url+"/getUpdates?timeout=100"    # In 100 seconds if user input query then process that, use it as the read timeout from the server
